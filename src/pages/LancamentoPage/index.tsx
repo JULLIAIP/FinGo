@@ -1,25 +1,43 @@
 import { useContext } from 'react'
-import LeftMenu from '../../components/LeftMenu'
-import TopMenu from '../../components/TopMenu'
+import { FilterLancamento } from '../../components/Filter-Lancamentos'
+import { Plus, MagnifyingGlass } from 'phosphor-react'
 import { GlobalContext } from "../../global/UseContext"
-import { CardChartContainer, ChartContainer } from '../style'
+import { ModalLancamentos } from '../../components/Modal-Lancamentos'
+import { LancamentosContain, List } from './style'
+import { ButtonSucess } from '../../components/Modal-Lancamentos/style'
 
-export const LancamentoPage = () => {
+export const LancamentosPage = () => {
 
-    const teste = useContext(GlobalContext)
+    const { modal, setModal, lancamentos }: any = useContext(GlobalContext)
 
     return (
         <body>
-            <LeftMenu />
-            <ChartContainer colunm = '1fr'>
+            <LancamentosContain modal={modal}>
+                <ButtonSucess onClick={() => setModal(!modal)}> <Plus size={32} />Adicionar</ButtonSucess>
+                {modal && <ModalLancamentos />}
+                <FilterLancamento />
+                {lancamentos&&lancamentos.map((item)=>{
+                    return(
+                        <List>
+                            <header> 
+                                <h2>{lancamentos.length} Lançamentos</h2>
+                                <label>
+                                    <input placeholder='Localizar'/>
+                                    <button> <MagnifyingGlass size={32} /></button>
+                                </label>
+                            </header>
+                            <hr/>
+                            <table>
+                                <thead>Descrição</thead>
+                                <td>{item.descricao}</td>
+                            </table>
+                            
+                        </List>
+                    )
+                })}
+      
 
-                <TopMenu data = ''/>
-
-                <main>
-                    <CardChartContainer>
-
-                    </CardChartContainer>
-                </main>
-            </ChartContainer></body>
+            </LancamentosContain>
+        </body>
     )
 }

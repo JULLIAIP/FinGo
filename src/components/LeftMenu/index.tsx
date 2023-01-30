@@ -18,10 +18,10 @@ const LeftMenu = () => {
         <MenuContain>
             <LeftMenuButton ativo ={showPage ==='HOME'} title="Home" onClick={() => setShowPage('HOME')}><HomeIcon /></LeftMenuButton>
             <LeftMenuButton ativo ={showPage ==='CADASTRO'} title="Cadastro" onClick={() => setShowPage('CADASTRO')}><CloudUploadIcon /></LeftMenuButton>
-            <LeftMenuButton ativo ={showPage ==='LACAMENTO'} title="Lançamento" onClick={() => setShowPage('LACAMENTO')}><SystemUpdateAltIcon /></LeftMenuButton>
-            <LeftMenuButton ativo ={showPage ==='FLUXO-DE-CAIXA'} title="Fluxo de Caixa" onClick={() => setShowPage('FLUXO-DE-CAIXA')}><SyncAltIcon /></LeftMenuButton>
+            {/* <LeftMenuButton ativo ={showPage ==='LACAMENTO'} title="Lançamento" onClick={() => setShowPage('LACAMENTO')}><SystemUpdateAltIcon /></LeftMenuButton>
+            <LeftMenuButton ativo ={showPage ==='FLUXO-DE-CAIXA'} title="Fluxo de Caixa" onClick={() => setShowPage('FLUXO-DE-CAIXA')}><SyncAltIcon /></LeftMenuButton> */}
             <LeftMenuButton ativo ={showPage ==='ORCAMENTO'} title="Orçamento" onClick={() => setShowPage('ORCAMENTO')}><PaidIcon /></LeftMenuButton>
-            <LeftMenuButton ativo ={showPage ==='CAR-CARP'} title="Car Cap" onClick={() => setShowPage('CAR-CARP')}><PointOfSaleIcon /></LeftMenuButton>
+            {/* <LeftMenuButton ativo ={showPage ==='CAR-CARP'} title="Car Cap" onClick={() => setShowPage('CAR-CARP')}><PointOfSaleIcon /></LeftMenuButton> */}
         </MenuContain>
     )
 }

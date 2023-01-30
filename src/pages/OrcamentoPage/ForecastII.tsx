@@ -9,17 +9,9 @@ const ForecastII = () => {
 
 
     return (
-        <main>
-
-
-
-            <CardChartContainer>
-                <AreaChart />
-            </CardChartContainer>
-
-
-
-        </main>
+        <body>
+            <AreaChart />
+        </body>
     )
 }
 

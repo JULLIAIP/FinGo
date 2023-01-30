@@ -4,22 +4,22 @@ import TopMenu from '../../components/TopMenu'
 import { GlobalContext } from "../../global/UseContext"
 import { CardChartContainer, ChartContainer } from '../style'
 
-export const FluxoDeCaixaPage = () => {
+export const Entradas = () => {
 
     const teste = useContext(GlobalContext)
 
     return (
         <body>
-        <LeftMenu />
-        <ChartContainer colunm = '1fr'>
+            <LeftMenu />
+            <ChartContainer colunm = '1fr'>
 
-            <TopMenu data = ''/>
+                <TopMenu data = ''/>
 
-            <main>
-                <CardChartContainer>
+                <main>
+                    <CardChartContainer>
 
-                </CardChartContainer>
-            </main>
-        </ChartContainer></body>
+                    </CardChartContainer>
+                </main>
+            </ChartContainer></body>
     )
 }

@@ -1,11 +1,7 @@
 import { useContext, useState } from 'react'
-import { AreaChart } from '../../components/Charts/AreaChart'
 import LeftMenu from '../../components/LeftMenu'
-import { MultitypeChartApp } from '../../components/Charts/MultitypeChart'
-import { VerticalBarChart } from '../../components/Charts/VerticalBarChart'
 import { GlobalContext } from "../../global/UseContext"
-import { CardChartContainer, ChartContainer } from '../style'
-import logo from '../../assets/logo.png'
+import {ChartContainer } from '../style'
 import TopMenu from '../../components/TopMenu'
 import BudgestI from './BudgestI'
 import BudgestII from './BudgetII'
@@ -14,7 +10,7 @@ import ForecastII from './ForecastII'
 
 export const OrcamentoPage = () => {
 
-    const { showCadastro } = useContext(GlobalContext)
+    const { showCadastro }:any  = useContext(GlobalContext)
     const [topMenu, setTopMenu] = useState(['Budget I', 'Budget II', 'Forecast I', 'Forecast II'])
 
     return (

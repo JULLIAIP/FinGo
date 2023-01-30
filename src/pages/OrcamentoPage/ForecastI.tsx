@@ -6,14 +6,11 @@ import { CardChartContainer } from "../style"
 
 const ForecastI = () => {
 
-
-
     return (
-        <main>
-            <CardChartContainer>
-                <AreaChart />
-            </CardChartContainer>
-        </main>
+        <body>
+            <AreaChart />
+            </body>
+
     )
 }
 

@@ -10,13 +10,11 @@ export default createGlobalStyle`
   body{
     width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 10fr;
-    grid-row: 1fr;
     align-items:center ;
     justify-items: center;
-    background-color: #F6F8FA;
-  }
-  
+    background-color: #F6F8FA;   
+  }  
   `
+
+
 
