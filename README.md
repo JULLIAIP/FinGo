@@ -1,6 +1,6 @@
 # FinGo
 MVP DA PLATAFORMA DA FINGO
-Em produção - 
+Em produção 
 
 
 # Após clonar este repositório :
