@@ -8,3 +8,11 @@ Em produção
 yarn ou npm install para baixar as dependências
 
 yar dev ou npm run dev para rodar o projeto localmente
+
+# Principal concorrete
+
+https://app-new.controlle.com/
+ 
+ Acessos: 
+ Jullia izidorio paiva silva
+ 199797ju
