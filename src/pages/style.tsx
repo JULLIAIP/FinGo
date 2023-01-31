@@ -26,7 +26,6 @@ main{
     justify-items: center;
 }
 `
-
 export const CardChartContainer: any = styled.div`
 display: flex;
 justify-content: center;
@@ -36,6 +35,4 @@ font-size:1em;
 width: 98%;
 height:98%;
 background-color: white;
-
-
 `

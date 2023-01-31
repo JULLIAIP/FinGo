@@ -9,17 +9,11 @@ const BudgestII = () => {
 
 
     return (
-        <main>
+        <body>
 
-            <CardChartContainer>
-                <VerticalBarChart />
-            </CardChartContainer>
+            <VerticalBarChart />
 
-
-            <CardChartContainer>
-                <VerticalBarChart />
-            </CardChartContainer>
-        </main>
+        </body>
     )
 }
 

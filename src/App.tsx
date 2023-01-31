@@ -1,16 +1,21 @@
 
 import { UseGlobalContext } from './global/UseContext'
-import { HomePage } from './pages/HomePage'
 import GlobalStyle from './global/style'
-import { Roteador } from './pages/roteador';
-
+import { BrowserRouter } from "react-router-dom";
+import './/global/global.css'
+import { Rotas } from './rotas/rotas';
+import TopMenu from './components/TopMenu';
 
 function App() {
 
+
   return (
     <UseGlobalContext>
-      <GlobalStyle />
-      <Roteador/>
+      <BrowserRouter>
+        <GlobalStyle />
+        <TopMenu />
+        <Rotas />
+      </BrowserRouter>
     </UseGlobalContext>
   )
 }

@@ -1,8 +1,7 @@
 import { useContext } from 'react'
-import LeftMenu from '../../components/LeftMenu'
-import TopMenu from '../../components/TopMenu'
 import { GlobalContext } from "../../global/UseContext"
-import { CardChartContainer, ChartContainer } from '../style'
+import { HomeContain } from './style'
+
 
 export const HomePage = () => {
 
@@ -10,14 +9,23 @@ export const HomePage = () => {
 
     return (
         <body>
-        <LeftMenu />
-        <ChartContainer>
+            <HomeContain >
 
-            <TopMenu data = ""/>
+                <div className='header'>
+                    <h1>Bem vinda, Júllia</h1>
+                </div>
 
-            <main>
-           Bem vindo
-            </main>
-        </ChartContainer></body>
+                <div className='saldo'>
+                    <h1>Saldo Geral</h1>
+
+                </div>
+
+                <div className='balanco'>
+                    <h1>Balanço</h1>
+
+                </div>
+
+            </HomeContain>
+        </body>
     )
 }

@@ -7,11 +7,9 @@ import { CardChartContainer } from "../style"
 const BudgestI = () => {
 
     return (
-        <main colunm = '1fr'>
-            <CardChartContainer>
-                <MultitypeChartApp />
-            </CardChartContainer>
-        </main>
+        <body>
+            <MultitypeChartApp />
+        </body>
     )
 }
 
