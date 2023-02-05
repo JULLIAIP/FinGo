@@ -36,3 +36,15 @@ width: 98%;
 height:98%;
 background-color: white;
 `
+export const RelatoriosContain = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width: 100%;
+gap:10px;
+padding: 20px;
+position: fixed;
+z-index: 0;
+margin-top: 80px;
+`

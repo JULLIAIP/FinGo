@@ -1,19 +1,15 @@
-import { AreaChart } from "../../components/Charts/AreaChart"
-import { MultitypeChartApp } from "../../components/Charts/MultitypeChart"
 import { VerticalBarChart } from "../../components/Charts/VerticalBarChart"
-import { CardChartContainer } from "../style"
+import {  RelatoriosContain } from "../style"
 
 
 const BudgestII = () => {
 
-
-
     return (
-        <body>
+        <RelatoriosContain>
 
             <VerticalBarChart />
 
-        </body>
+        </RelatoriosContain>
     )
 }
 
