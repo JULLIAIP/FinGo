@@ -10,6 +10,10 @@ export const UseGlobalContext = ({ children }: ContextoProviderProps) => {
     const [showPage, setShowPage] = useState("HOME")
     const [showCadastro, setShowCadastro] = useState("Entradas")
     const [modal, setModal] = useState(false)
+    const [categoriasEntrada, setCategoriasEntradas]= useState([
+        {}
+    ])
+    
     const [lancamentos, setLancamentos] = useState([
         {
 
