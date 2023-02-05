@@ -41,25 +41,20 @@ input, select{
 `
 export const CloseButton: any = styled.button`
 border-radius: 50%;
-border:2px solid white;
-color: white;
-width: 50px;
-background-color: rgba(0, 0, 0, 0.5);
-height: 50px;
 position: absolute;
-top: -05%;
+top: -08%;
 left: 95%;
 `
 export const ButtonSucess = styled.button`
 display: flex;
 justify-content: center;
 align-items: center;
+color: white;
 gap: 10px;
-  background-color: green;
-  width: 50%;
-  color: black;
-  height: 40px;
-  border-radius: 5px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+background-color: green;
+width: 50%;
+height: 40px;
+border-radius: 5px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 `

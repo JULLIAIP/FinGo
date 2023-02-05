@@ -2,6 +2,7 @@
 import { Route, Routes } from "react-router-dom";
 import Entradas from "../pages/CadastroPage/entradas";
 import Saidas from "../pages/CadastroPage/saidas";
+import ConfiguracoesPage from "../pages/ConfiguraçõesPage";
 import { HomePage } from "../pages/HomePage";
 import { LancamentosPage } from "../pages/LancamentoPage";
 import BudgestI from "../pages/OrcamentoPage/BudgestI";
@@ -20,6 +21,7 @@ export function Rotas() {
             <Route path="/relatorios/budget-II" element={<BudgestII />} />
             <Route path="/relatorios/forecast-I" element={<ForecastI />} />
             <Route path="/relatorios/forecast-II" element={<ForecastII />} />
+            <Route path="/config" element={<ConfiguracoesPage />} />
             <Route path="*" element={<h1>Not Found</h1>}/>
         </Routes>
 

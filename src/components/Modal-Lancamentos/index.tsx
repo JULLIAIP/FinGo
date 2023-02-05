@@ -1,10 +1,10 @@
 import { GlobalContext } from "../../global/UseContext";
 import { useContext, useState } from 'react'
 import { BackgroundModal, ButtonSucess, CloseButton, ModalContain } from "./style";
-import { LancamentosContain } from "../../pages/LancamentoPage/style";
+import { XCircleIcon } from '@heroicons/react/24/solid'
 
 export function ModalLancamentos() {
-    const { modal, setModal, lancamentos, setLancamentos }: any = useContext(GlobalContext)
+    const { modal, setModal, contas, setLancamentos }: any = useContext(GlobalContext)
 
     const [descricao, setDescricao] = useState('')
     const [valor, setValor] = useState('')
@@ -35,7 +35,7 @@ export function ModalLancamentos() {
     return (
         <BackgroundModal modal={modal}>
             <ModalContain>
-                <CloseButton onClick={() => setModal(!modal)}>X</CloseButton>
+                <CloseButton onClick={() => setModal(!modal)}><XCircleIcon /></CloseButton>
 
                 <label>
                     <span>Categoria</span>
@@ -71,9 +71,7 @@ export function ModalLancamentos() {
                 <label>
                     <span>Conta</span>
                     <select onChange={(e) => setConta(e.target.value)}>
-                        <option>Cartão</option>
-                        <option>Poupança</option>
-                        <option>Caixa</option>
+                        {contas && contas.map((item: any) => <option>{item.nome}</option>)}
                     </select>
                 </label>
                 <ButtonSucess onClick={

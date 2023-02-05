@@ -54,7 +54,7 @@ const TopMenu = (props: any) => {
 
             </div >
             <div>
-                <button><Gear size={32} /></button>
+                <button onClick={() => goToPage('config')}><Gear size={32} /></button>
                 <button><User size={32} /></button>
             </div>
         </TopMenuContain >
