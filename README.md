@@ -1,7 +1,7 @@
 # FinGo
+Meta:
 MVP DA PLATAFORMA DA FINGO
 Em produção 
-
 
 # Após clonar este repositório :
 
@@ -21,5 +21,7 @@ https://app-new.controlle.com/
  
  Acessos: 
 sou@paulasoares.me
+
  125879
+ 
  06/02/23
