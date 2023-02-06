@@ -9,7 +9,13 @@ yarn ou npm install para baixar as dependências
 
 yar dev ou npm run dev para rodar o projeto localmente
 
-# Principal concorrete
+# Style Guide
+## Nomenclatura de componentes
+- Camel case
+- Lingua inglesa
+## Arquitetura
+- Vertical Slice: https://www.youtube.com/watch?v=HOkt02QzoRc
+# Principal concorrente
 
 https://app-new.controlle.com/
  
