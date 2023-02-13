@@ -42,6 +42,7 @@ div{
 select{
    background: transparent;
    color: white;
+   border:none;
    cursor: pointer;
    option{
       background-color: #1644B4;

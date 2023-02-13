@@ -1,6 +1,8 @@
 
 import React, { useState } from "react"
+import Categorias from "./Categorias"
 import Contas from "./Contas"
+import DadosPessoais from "./DadosPessoais"
 export default function ConfiguracoesPage() {
 
     const menuOptions = [
@@ -9,7 +11,7 @@ export default function ConfiguracoesPage() {
         { name: 'Categorias', href: '#', icon: "" },
     ]
 
-    const [show, setShow] = useState('conta')
+    const [show, setShow] = useState('Dados Pessoais')
 
     return (
         <div className="bg-slate-100 ">
@@ -32,9 +34,11 @@ export default function ConfiguracoesPage() {
                             </ul>
 
                             {/* Area de configuração */}
-                            <div className="lg:col-span-3 min-h-full">
-                                <div className="h-96 bg-white rounded-lg  shadow-md">
+                            <div className="lg:col-span-3 min-h-full h-auto">
+                                <div className="h-auto bg-white rounded-lg p-4 shadow-md">
                                     {show === 'Contas' ? <Contas /> : null}
+                                    {show === 'Categorias' ? <Categorias /> : null}
+                                    {show === 'Dados Pessoais' ? < DadosPessoais /> : null}
                                 </div>
 
                             </div>
