@@ -39,7 +39,7 @@ export function ModalLancamentos() {
 
                 <label>
                     <span>Categoria</span>
-                    <select onChange={(e) => setCategoria(e.target.value)}>
+                    <select onChange={(e) => setCategoria(e.target.value)} required>
                         <option>Entrada</option>
                         <option>Saída</option>
                         <option>Transferências</option>
@@ -47,7 +47,7 @@ export function ModalLancamentos() {
                 </label>
                 <label>
                     <span>Subcategoria</span>
-                    <select onChange={(e) => setCategoria(e.target.value)}>
+                    <select onChange={(e) => setCategoria(e.target.value)} required>
                         <option>Entrada</option>
                         <option>Saída</option>
                         <option>Transferências</option>
@@ -55,7 +55,7 @@ export function ModalLancamentos() {
                 </label>
                 <label>
                     <span>Valor</span>
-                    <input name="valor" type={"number"} placeholder="R$ 0,00" onChange={(e) => setValor(e.target.value)} />
+                    <input name="valor" type={"number"} placeholder="R$ 0,00" onChange={(e) => setValor(e.target.value)} required />
                 </label>
                 <label>
                     <span>Nº de parcelas</span>
