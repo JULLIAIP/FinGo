@@ -1,5 +1,6 @@
-export default function DadosPessoais (){
-    return(
-        'dados pessoais'
+export default function DadosPessoais() {
+    return (
+        <div>
+            dados pessoais</div>
     )
 }
