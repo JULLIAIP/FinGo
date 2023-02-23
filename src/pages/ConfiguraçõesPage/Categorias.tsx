@@ -5,8 +5,46 @@ import { StyledDetails, StyledSummary } from './style'
 
 export default function Categorias() {
     const { categoriasSaida }: any = useContext(GlobalContext)
+    const { categoriasEntrada }: any = useContext(GlobalContext)
     const [showCategorias, setShowCategorias] = useState('')
 
+    const listaCategorias = (categorias: any) => {
+        return categorias.map((item: any, i: number) => {
+            return (
+                <tbody key={i} className="mt-2 w-full flex justify-center items-center">
+                    <StyledDetails className='flex w-full'>
+                        <StyledSummary className=''>
+                            <tr className='flex w-full items-center 
+                            justify-between p-2 bg-white border-b-2 '
+                            >
+                                <td> <strong>{item.cod}</strong> </td>
+                                <td><strong>{item.descricao}</strong> </td>
+                                <td className="flex gap-2 justify-end">
+                                    <button  ><TrashIcon className=" hover:text-red-500 h-6 w-4" /></button>
+                                    <button  > <PencilIcon className="hover:text-red-500 h-6 w-4" /></button>
+                                </td>
+                            </tr>
+                        </StyledSummary>
+
+                        <td>{item.subCategorias.map((sub: any) => {
+                            return (
+                                <tr className='flex w-full bg-slate-200 m-1 items-center justify-between p-2'>
+                                    <td> {sub.cod}</td>
+                                    <td>{sub.descricao}</td>
+                                    <td className="flex gap-2 justify-end">
+                                        <button  ><TrashIcon className=" hover:text-red-500 h-6 w-4" /></button>
+                                        <button  > <PencilIcon className=" hover:text-red-500 h-6 w-4" /></button>
+                                    </td>
+                                </tr>
+
+                            )
+                        })}</td>
+                    </StyledDetails>
+
+                </tbody>
+            )
+        })
+    }
 
     return (
         <div>
@@ -30,41 +68,7 @@ export default function Categorias() {
                     </tr>
                 </thead>
 
-                {showCategorias === 'entradas' ? 'entradas' : categoriasSaida.map((item: any, i: number) => {
-                    return (
-                        <tbody key={i} className="mt-2 w-full flex justify-center items-center">
-                            <StyledDetails className='flex w-full'>
-                                <StyledSummary className=''>
-                                    <tr className='flex w-full items-center 
-                                    justify-between p-2 bg-white border-b-2 '
-                                    >
-                                        <td> <strong>{item.cod}</strong> </td>
-                                        <td><strong>{item.descricao}</strong> </td>
-                                        <td className="flex gap-2 justify-end">
-                                            <button  ><TrashIcon className=" hover:text-red-500 h-6 w-4" /></button>
-                                            <button  > <PencilIcon className="hover:text-red-500 h-6 w-4" /></button>
-                                        </td>
-                                    </tr>
-                                </StyledSummary>
-
-                                <td>{item.subCategorias.map((sub: any) => {
-                                    return (
-                                        <tr className='flex w-full bg-slate-200 m-1 items-center justify-between p-2'>
-                                            <td> {sub.cod}</td>
-                                            <td>{sub.descricao}</td>
-                                            <td className="flex gap-2 justify-end">
-                                                <button  ><TrashIcon className=" hover:text-red-500 h-6 w-4" /></button>
-                                                <button  > <PencilIcon className=" hover:text-red-500 h-6 w-4" /></button>
-                                            </td>
-                                        </tr>
-
-                                    )
-                                })}</td>
-                            </StyledDetails>
-
-                        </tbody>
-                    )
-                })}
+                {showCategorias === 'entradas' ? listaCategorias(categoriasEntrada) : listaCategorias(categoriasSaida)}
 
             </table>
         </div >

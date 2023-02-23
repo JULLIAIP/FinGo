@@ -51,7 +51,45 @@ export const UseGlobalContext = ({ children }: ContextoProviderProps) => {
                 ]
         },
     ])
-    const [categoriasEntrada, setCategoriasEntrada] = useState([])
+    const [categoriasEntrada, setCategoriasEntrada] = useState([
+        {
+            cod: "001", descricao: "CUSTOS TRIBUTÁRIOS", conta: "Carteira", subCategorias:
+                [
+                    { cod: "001.01", descricao: "PIS" },
+                    { cod: "001.02", descricao: "COFINS" },
+                    { cod: "001.03", descricao: "CSLL" },
+                    { cod: "001.04", descricao: "IRPJ" },
+                    { cod: "001.05", descricao: "ISS" },
+                    { cod: "001.06", descricao: "Outras Despesas com custos tributáveis" },
+                ]
+        },
+        {
+            cod: "002", descricao: "CUSTOS COM TERCEIRIZACOES DE SERVICOS", conta: "Carteira", subCategorias:
+                [
+                    { cod: "002.01", descricao: "Serviços de Desemvolvimento" },
+                    { cod: "002.02", descricao: "Outras Despesas com custos com terceirizadps de serviços" },
+                ]
+        },
+        {
+            cod: "003", descricao: "CUSTO COM VENDAS", conta: "Carteira", subCategorias:
+                [
+                    { cod: "003.01", descricao: "Comissão Interna" },
+                    { cod: "003.02", descricao: "Comissão Externa" },
+                    { cod: "003.03", descricao: "Softwares de Desenvolvimento" },
+                    { cod: "003.04", descricao: "Outras Despesas com custos com vendas" },
+                ]
+        },
+        {
+            cod: "004", descricao: "DESPESAS GERAIS & ADMINISTRATIVAS", conta: "Carteira", subCategorias:
+                [
+                    { cod: "004.01", descricao: "Aluguel e Condomínio" },
+                    { cod: "004.02", descricao: "IPTU e Taxas Públicas" },
+                    { cod: "004.03", descricao: "Energia Elétrica" },
+                    { cod: "004.04", descricao: "Água & Esgoto" },
+                ]
+        },
+
+    ])
     const [contas, setContas] = useState([
         { nome: "Carteira", saldoInicial: "0,00", saldoAtual: "0,00", categorias: "todas" },
         { nome: "Poupança", saldoInicial: "0,00", saldoAtual: "0,00", categorias: "todas" }
@@ -71,11 +109,11 @@ export const UseGlobalContext = ({ children }: ContextoProviderProps) => {
             modal,
             contas,
             categoriasSaida,
-            modalNewAccount,
             categoriasEntrada,
-            setCategoriasEntrada,
+            modalNewAccount,
             setModalNewAccount,
             setCategoriasSaida,
+            setCategoriasEntrada,
             setContas,
             setLancamentos,
             setShowPage,

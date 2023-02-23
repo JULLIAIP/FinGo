@@ -1,7 +1,9 @@
 # FinGo
 Meta:
-MVP DA PLATAFORMA DA FINGO
-Em produção 
+MVP DA PLATAFORMA DA FINGO - WIP
+
+Miro: https://miro.com/app/board/uXjVPkdtcO8=/
+
 
 # Após clonar este repositório :
 
@@ -15,13 +17,16 @@ yar dev ou npm run dev para rodar o projeto localmente
 - Lingua inglesa
 ## Arquitetura
 - Vertical Slice: https://www.youtube.com/watch?v=HOkt02QzoRc
-# Principal concorrente
+## Principal concorrente
 
-https://app-new.controlle.com/
+https://app-new.controlle.com/ 
+``` Fora do ar desde 17/02```
  
- Acessos: 
+ Acesso p testes: 
+ ```
 sou@paulasoares.me
 
  125879
  
  06/02/23
+```
